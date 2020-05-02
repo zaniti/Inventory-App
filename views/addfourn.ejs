@@ -1,0 +1,35 @@
+<%- include('header'); -%>
+
+
+    <div class="form">
+      <h1  class="title">Add Supplier</h1>
+
+        <form method="POST" action="/addfourn" class="form">
+
+            <div class="form-group">
+                <input placeholder="Supplier's Name" name="nomfour" class="form-control" id="nom" type="text" required>
+            </div>
+
+            <div class="form-group">
+                <input placeholder="Mail" name="mail" class="form-control" id="prenom" type="text" required>
+            </div>
+            <div class="form-group">
+                <input placeholder="Phone Number" name="tele" class="form-control" id="age" type="number" required>
+            </div>
+
+            <input class="btn btn-dark float-right" type="submit" value="Add">
+        </form>
+
+
+
+        <br> <br>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

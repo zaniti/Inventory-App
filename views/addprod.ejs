@@ -1,0 +1,61 @@
+<%- include('header'); -%>
+
+
+    <div class="form">
+      <h1 class="title">Add Products</h1>
+
+        <form method="POST" action="/addprod" class="form">
+          <div class="form-row">
+            <div class="form-group  col-md-4">
+                <input placeholder="Product's name" name="nom" class="form-control" id="nom" type="text" required>
+            </div>
+
+            <div class="form-group  col-md-4">
+                <input placeholder="Quantity" name="quantite" class="form-control" id="prenom" type="number" required>
+            </div>
+            <div class="form-group  col-md-4">
+                <input placeholder="Price (DH)" name="prix" class="form-control" id="age" type="number" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+                <label>Supplier:</label>
+                <select name="four" class="form-control" required>
+                    <% fournisseurs.forEach(function (four) { %>
+
+                    <option > <%= four.nomfour %> </option>
+                    <% }) %>
+                </select>
+                <a href="/addfourn">Add another supplier</a>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label>Category:</label>
+                <select name="categ" class="form-control" required>
+                    <% rayons.forEach(function (ray) { %>
+
+                    <option> <%= ray.categorie %> </option>
+
+                    <% }) %>
+                </select>
+                <a href="/addcat">Add another category</a>
+
+            </div>
+            </div>
+
+            <input class="btn btn-dark float-right" type="submit" value="Add">
+
+        </form>
+        <a href="/" > < Go Back to Products</a>
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

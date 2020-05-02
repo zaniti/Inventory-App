@@ -1,0 +1,55 @@
+<%- include('header'); -%>
+
+<div class="container">
+    <h1 class="title">Suppliers :</h1>
+
+
+
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr class="table100-head">
+                <th class="column">ID</th>
+                <th class="column">Nom du fournisseur</th>
+                <th class="column">Mail</th>
+                <th class="column">N° tel</th>
+                <th style="width: 50px;" class="column"></th>
+                <th style="width: 80px;" class="column"></th>
+
+
+
+            </tr>
+        </thead>
+         <tbody>
+            <% fournisseurs.forEach(function (four) { %>
+                <tr>
+                    <td class="column"><%= four.id %> </td>
+                    <td class="column"><%= four.nomfour %></td>
+                    <td class="column"><%= four.mail %></td>
+                    <td class="column"><%= four.tele %></td>
+
+                    <td><a href="/delete/four/<%= four.id %>" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                    <td><a href="/updatefourni/<%= four.id %> " class="btn btn-sm btn-success"> UPDATE</a> </td>
+
+                </tr>
+
+             <% }) %>
+         </tbody>
+    </table>
+
+            <div>
+            <a href="/addfourn" class="btn btn-dark float-right">Add Supplier</a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

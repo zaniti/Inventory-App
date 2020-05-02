@@ -1,0 +1,58 @@
+<%- include('header'); -%>
+<div class="container">
+
+    <h1 class="title">Products :</h1>
+
+
+
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr class="table100-head">
+                <th class="column">ID</th>
+                <th class="column">Product's name</th>
+                <th class="column">Quantity</th>
+                <th class="column">Price (DH)</th>
+                <th class="column">Supplier's name</th>
+                <th class="column">Category</th>
+                <th style="width: 50px;" class="column"></th>
+                <th style="width: 80px;" class="column"></th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <% produits.forEach(function (prod) { %>
+               <tr>
+                   <td class="column"><%= prod.id %> </td>
+                   <td class="column"><%= prod.nom %></td>
+                   <td class="column">
+                    <a href="/addquantite/<%= prod.id %>" class="btn btn-sm btn-success">+</a>&nbsp
+                    <%= prod.quantite %>&nbsp
+                    <a href="/deletequantite/<%= prod.id %>" class="btn btn-sm btn-danger">-</a>
+                   </td>
+                   <td class="column"><%= prod.prix %></td>
+                   <td class="column"><%= prod.nomfour %></td>
+                   <td class="column"><%= prod.categorie %></td>
+                   <td><a href="/delete/<%= prod.id %>" class="btn btn-sm btn-danger">Delete</a>
+                   </td>
+                   <td><a href="/updateproduct/<%= prod.id %> " class="btn btn-sm btn-success"> UPDATE</a> </td>
+
+               </tr>
+
+            <% }) %>
+            </tbody>
+    </table>
+
+    <a href="/addprod" class="btn btn-dark float-right">Add Product</a>
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

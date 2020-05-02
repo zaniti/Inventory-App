@@ -1,0 +1,43 @@
+<%- include('header'); -%>
+
+
+    <div class="form">
+      <h1 class="title">Update Product</h1>
+
+        <% test.forEach(function (produc) { %>
+        <form method="POST" action="/updateproduct/<%= produc.id %>" class="form">
+
+
+            <div class="form-row">
+              <div class="form-group  col-md-4">
+                  <label>Product's name:</label>
+                  <input value="<%= produc.nom %>" name="nom" class="form-control" id="nom" type="text" required>
+              </div>
+
+              <div class="form-group  col-md-4">
+                  <label>Quantity:</label>
+                  <input value="<%= produc.quantite %>" name="quantite" class="form-control" id="prenom" type="number" required>
+              </div>
+              <div class="form-group  col-md-4">
+                  <label>Price (DH):</label>
+                  <input value="<%= produc.prix %>" name="prix" class="form-control" id="age" type="number" required>
+              </div>
+            </div>
+
+            <% }) %>
+
+            <input class="btn btn-dark float-right" type="submit" value="UPDATE">
+
+        </form>
+
+        <br> <br>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
