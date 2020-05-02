@@ -5,7 +5,7 @@
 Step 1 : Install Required packages using NPM
 
 ```console
-npm install
+> npm install
 ```
 
 Step 2 : Import the sql file (gestion_d_inventaire.sql) to Mysql
@@ -13,7 +13,7 @@ Step 2 : Import the sql file (gestion_d_inventaire.sql) to Mysql
 step 3 : Run the Application using node
 
 ```console
-node app.js
+> node app.js
 ```
 
 Step 4 : Type http://localhost:3000/ in your browser to acces the Application
