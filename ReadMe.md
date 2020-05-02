@@ -2,7 +2,7 @@
 ## Application to manage your supermarket inventory Add/Update/Delete a product, supplier, aisle.
 ### How to use :
 
-#### 1. Install Required packages using NPM
+#### 1. Install Required packages from console using NPM
 
 ```console
 > npm install
